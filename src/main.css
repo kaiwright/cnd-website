@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/fonts/SueEllenFrancisco-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  background-color: rgb(48, 27, 1);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'MyFont', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  /* background-image: url(./assets/board.png); */
+  width: 90vw;
+  height: 95vh;
+  background-color: rgb(114, 66, 3);
+  position: relative
+}
+
+.sign {
+  width: 80%;
+  height: 13%;
+  max-height: 150px;
+  background-color: rgb(172, 102, 12);
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.page1 {
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  top: 15%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./assets/Page1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page1 div {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+  z-index: 2;
+  position: absolute;
+  top: 1%;
+}
+
+.page1 p {
+  color: black;
+  display: flex;
+  margin-top: 25%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.25rem;
+  z-index: 2;
+  line-height: 156%;
+}
+
+.page2 {
+  position: absolute;
+  width: 70%;
+  height: 40%;
+  top: 33%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./assets/page2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page2 div {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+  z-index: 2;
+  top: 1%;
+}
+
+.page2 p {
+  color: black;
+  font-size: 1.25rem;
+  z-index: 2;
+  line-height: 156%;
+  display: flex;
+  margin-block-start: 0%;
+}
+
+.email-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.embeddable-buttondown-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#bd-email {
+  background-color: antiquewhite;
+  border: 1px solid black;
+  padding: 5%;
+  font-family: 'MyFont', sans-serif;
+  width: 10rem;
+  border-radius: 4%;
+}
+
+#bd-email-btn {
+  width: 50%;
+  background-color: black;
+  border: none;
+  border-radius: 5%;
+  color: whitesmoke;
+  font-family: 'MyFont', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.letter img {
+  position: absolute;
+  width: 38%;
+  height: auto;
+  bottom: 39%;
+  left: 1%;
+  transform: rotate(-5deg);
+}
+
+.page3 {
+  position: absolute;
+  width: 50%;
+  max-width: 200px;
+  height: 25%;
+  bottom: 5%;
+  left: 5%;
+  background-color: rgb(230, 214, 193);
+  transform: rotate(2deg);
+}
+
+.page4 {
+  position: absolute;
+  width: 50%;
+  max-width: 200px;
+  height: 20%;
+  bottom: 1%;
+  right: 3%;
+  background-color: antiquewhite;
+  transform: rotate(-3deg);
+}
