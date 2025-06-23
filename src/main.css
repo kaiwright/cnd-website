@@ -52,7 +52,7 @@ body,
 
 #logo {
   width: auto;
-  height: 90%;
+  height: 80%;
   display: block;
   position: static;
 }
@@ -62,7 +62,6 @@ body,
   width: 70%;
   height: 20%;
   max-width: 400px;
-  min-height: 200px;
   max-height: 300px;
   top: 15%;
   left: 5%;
@@ -77,10 +76,11 @@ body,
 
 .page1 div {
   color: black;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 600;
   z-index: 2;
   position: absolute;
+  padding-bottom: 1%;
   top: 1%;
 }
 
@@ -90,6 +90,7 @@ body,
   margin-top: 10%;
   margin-left: 10%;
   margin-right: 10%;
+  padding-top: 1.5rem;
   font-size: 1.25rem;
   z-index: 2;
   line-height: 156%;
@@ -176,62 +177,118 @@ body,
 .letter img {
   position: absolute;
   width: 38%;
+  max-width: 250px;
   height: auto;
   bottom: 35vh;
   left: 1%;
   transform: rotate(-5deg);
 }
 
-.page3 {
+.page3 img {
   position: absolute;
   width: 50%;
   max-width: 200px;
-  height: 25%;
+  height: auto;
   bottom: 5%;
-  left: 5%;
-  background-color: rgb(230, 214, 193);
+  left: 2%;
   transform: rotate(2deg);
 }
 
-.page4 {
+.page4 img {
   position: absolute;
   width: 50%;
   max-width: 200px;
-  height: 20%;
-  bottom: 1%;
+  height: auto;
+  bottom: 2%;
   right: 3%;
-  background-color: antiquewhite;
   transform: rotate(-3deg);
 }
 
 
-/* Responsive tweaks for very small screens */
-@media (min-width: 800px) {
+@media (max-height: 795px) and (max-width: 492px) {
+
+  .page1 {
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  max-width: 400px;
+  max-height: 300px;
+  min-height: fit-content;
+  top: 15%;
+  left: 5%;
+
+}
+
+  .page1 div {
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+  z-index: 2;
+  position: absolute;
+  padding-bottom: 1%;
+  top: 1%;
+}
+
+.page1 p {
+  color: black;
+  display: flex;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 2rem;
+  font-size: 1.25rem;
+  z-index: 2;
+  line-height: 156%;
+}
+
   .letter img {
-    width: 60vw;
-    max-width: 90vw;
-    bottom: 35vh;
-    left: 5vw;
+    width: 40%;
+    bottom: 2%;
+    left: 3%;
   }
+
+  .page2 {
+  width: 70%;
+  height: 40%;
+  min-width: fit-content;
+  min-height: fit-content;
+  max-width: 250px;
+  max-height: 400px;
+  top: 38vh;
+  right: 2%;
+  }
+
+  .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#ig,
+#li,
+#bs {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
 
   .page3,
   .page4 {
-    width: 90vw;
-    max-width: 95vw;
-    left: 2vw !important;
-    right: 2vw !important;
-    min-height: 60px;
-    font-size: 1rem;
+    display: none;
   }
 }
 
 /* Responsive tweaks for large screens */
 @media (min-width: 1000px) {
   .letter img {
-    width: 18vw;
-    max-width: 250px;
-    bottom: 40vh;
-    left: 2vw;
+    width: 20%;
+    height: auto;
+    bottom: 35vh;
+    left: 1%;
   }
 
   .page3,

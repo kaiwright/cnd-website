@@ -7,6 +7,8 @@ import letterImgOpen from "./assets/LetterOpen.png";
 import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/Bluesky.png";
 import linkedinIcon from "./assets/Linkedin.png";
+import page3 from "./assets/page3.png";
+import missing from "./assets/page4.png";
 
 function App() {
 
@@ -43,13 +45,13 @@ const [isOpen, setIsOpen] = React.useState(false);
           </div>
           <div className="socials">
             <a href="https://www.instagram.com/croakanddaggergames/" target="_blank">
-              <img src={instagramIcon} width={50} />
+              <img id="ig" src={instagramIcon} width={50} />
             </a>
             <a href="https://www.linkedin.com/company/107463949/" target="_blank">
-              <img src={linkedinIcon} width={50} />
+              <img id="li" src={linkedinIcon} width={50} />
             </a>
             <a href="https://bsky.app/profile/croakanddaggergame.bsky.social" target="_blank">
-              <img src={blueskyIcon} width={50} />
+              <img id="bs" src={blueskyIcon} width={50} />
             </a>
 
           </div>
@@ -57,8 +59,12 @@ const [isOpen, setIsOpen] = React.useState(false);
  <div className="letter" onClick={() => setIsOpen(true)}>
           <img src={isOpen ? letterImgOpen : letterImg} alt="Letter" />
         </div>
-        <div className="page3"></div>
-        <div className="page4"></div>
+        <div className="page3">
+          <img src={page3} />
+        </div>
+        <div className="page4">
+          <img src={missing} />
+        </div>
       </div>
     </div>
   );
