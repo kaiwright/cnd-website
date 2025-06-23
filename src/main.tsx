@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
-import Logo from "./assets/cnd-logo.png"
+import Logo from "./assets/logo-letters.png"
 import letterImg from "./assets/Letter.png";
 import letterImgOpen from "./assets/LetterOpen.png";
 import instagramIcon from "./assets/Instagram.png";
