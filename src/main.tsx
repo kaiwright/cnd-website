@@ -5,7 +5,7 @@ import Logo from "./assets/cnd-logo.png"
 import letterImg from "./assets/Letter.png";
 import letterImgOpen from "./assets/LetterOpen.png";
 import instagramIcon from "./assets/Instagram.png";
-import blueskyIcon from "./assets/BlueSky.png";
+import blueskyIcon from "./assets/Bluesky.png";
 import linkedinIcon from "./assets/Linkedin.png";
 
 function App() {
