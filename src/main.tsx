@@ -1,16 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
+import Logo from "./assets/cnd-logo.png"
 import letterImg from "./assets/Letter.png";
+import letterImgOpen from "./assets/LetterOpen.png";
 import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/BlueSky.png";
 import linkedinIcon from "./assets/Linkedin.png";
 
 function App() {
+
+const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <div className="container">
       <div className="board">
-        <div className="sign"></div>
+        <div className="sign">
+          <img id="logo" src={Logo} />
+        </div>
         <div className="page1">
           <div>HEAR YE! HEAR YE!</div>
           <p>Four adventurers set out on a perilous journey to create narrative-driven fantasy games</p>
@@ -47,8 +54,8 @@ function App() {
 
           </div>
         </div>
-        <div className="letter">
-          <img src={letterImg} />
+ <div className="letter" onClick={() => setIsOpen(true)}>
+          <img src={isOpen ? letterImgOpen : letterImg} alt="Letter" />
         </div>
         <div className="page3"></div>
         <div className="page4"></div>
