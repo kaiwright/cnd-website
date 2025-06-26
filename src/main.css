@@ -7,8 +7,7 @@
 
 :root {
   background-color: rgb(63, 36, 3);
-  background-image: url(./assets/wood-bark-toned.jpg);
-  background-size: 100dvw 100dvh;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
 
@@ -18,12 +17,14 @@ body,
   height: 100dvh;
   margin: 0;
   padding: 0;
-  font-family: 'MyFont', sans-serif;
+  font-family: 'MyFont', sans-serif !important;
   overflow: hidden;
 }
 
 .container {
   width: 100dvw;
+  height: 100dvh;
+  position: relative;
   min-height: 100dvh;
   display: flex;
   align-items: center;
@@ -31,43 +32,49 @@ body,
 }
 
 .board {
-  width: 90dvw;
-  height: 95dvh;
+  width: 100dvw;
+  height: 100dvh;
   background-color: rgb(114, 66, 3);
-  background-image: url(./assets/vertical-wood-toned.jpg);
-  background-size: 100dvw 100dvh;
+  background-image:
+    url(./assets/cnd-background-mobile.png),
+    url(./assets/cnd-border-mobile.png);
+  background-attachment: fixed, fixed;
+  background-size: 100dvw 100dvh, 100dvw 100dvh;
   position: relative;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+.top-part {
+  position: absolute;
+  width: 100%;
+  height: 6vh;
+  top: 0;
+  left: 0;
+  background-image: url(./assets/cnd-top.png);
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .sign {
-  background-image: url(./assets/sign.png);
+  background-image: url(./assets/cnd-logo-sign.png);
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  height: 15dvh;
+  width: 100%;
+  height: 100%;
   max-width: 700px;
   max-height: 200px;
-}
-
-#logo {
-  width: 90%;
-  height: 90%;
-  max-width: 100%;
-  max-height: 100%;
-  padding-top: 4%;
-  object-fit: contain;
-  display: block;
 }
 
 .page1 {
@@ -76,8 +83,8 @@ body,
   height: 20%;
   max-width: 400px;
   max-height: 300px;
-  top: 15%;
-  left: 5%;
+  top: 25%;
+  left: 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,10 +122,9 @@ body,
   height: 40%;
   min-width: fit-content;
   min-height: fit-content;
-  max-width: 250px;
   max-height: 400px;
-  top: 33vh;
-  right: 2%;
+  top: 47vh;
+  right: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,15 +195,15 @@ body,
 
 .letter img {
   position: absolute;
-  width: 38%;
+  width: 40%;
   max-width: 250px;
   height: auto;
-  bottom: 35vh;
-  left: 1%;
+  bottom: 3vh;
+  left: 2vw;
   transform: rotate(-5deg);
 }
 
-.page3 img {
+/* .page3 img {
   position: absolute;
   width: 50%;
   max-width: 200px;
@@ -215,127 +221,166 @@ body,
   bottom: 2%;
   right: 3%;
   transform: rotate(-3deg);
-}
+} */
 
-
-@media (max-height: 795px) and (max-width: 492px) {
-
+/* For short screens */
+@media (max-height: 821px) {
 
   .sign {
-  background-image: url(./assets/sign.png);
-  background-size: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 15%;
-  max-width: 300px;
-  max-height: 100px;
-}
-
-#logo {
-  width: 90%;
-  height: 90%;
-  max-width: 100%;
-  max-height: 100%;
-  padding-top: 2%;
-}
+    top: 15%;
+    max-width: 300px;
+    height: 100px;
+    background-size: 70%;
+  }
 
   .page1 {
-    position: absolute;
-    width: 70%;
-    height: 20%;
-    max-width: 400px;
-    max-height: 300px;
+    width: 60%;
+    height: 12vh;
     min-height: fit-content;
-    top: 15%;
-    left: 5%;
+    top: 25vh;
+    font-size: 0.9rem;
+    max-width: 300px;
+    max-height: 180px;
+    background-size: cover;
   }
 
-  .page1 div {
-    color: black;
-    font-size: 2.3rem;
-    font-weight: 600;
-    z-index: 2;
-    position: absolute;
-    padding-bottom: 1%;
-    top: 1%;
+  .page2 {
+    top: 45vh;
+    right: 10%;
+    height: 20vh;
+    max-height: 200px;
+    max-width: 60%;
   }
 
-  .page1 p {
-    color: black;
-    display: flex;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 2rem;
-    font-size: 1.25rem;
-    z-index: 2;
-    line-height: 156%;
+  .page1 div,
+  .page2 div {
+    font-size: 1.2rem;
+  }
+
+  .page1 p,
+  .page2 p {
+    font-size: 1rem;
+    margin-top: 4%;
   }
 
   .letter img {
     width: 40%;
-    bottom: 2%;
-    left: 3%;
+    bottom: 2vh;
+    left: 6vw;
   }
 
-  .page2 {
-    width: 70%;
-    height: 40%;
-    min-width: fit-content;
-    min-height: fit-content;
-    max-width: 250px;
-    max-height: 400px;
-    top: 38vh;
-    right: 2%;
-  }
-
-  .socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  #ig,
-  #li,
-  #bs {
-    width: 40px;
-    height: auto;
-    display: block;
-  }
-
-
-  .page3,
-  .page4 {
-    display: none;
+  .socials img {
+    width: 32px !important;
+    height: auto !important;
   }
 }
 
+
 /* Responsive tweaks for large screens */
 @media (min-width: 1000px) {
-  .letter img {
-    width: 20%;
-    height: auto;
-    bottom: 35vh;
-    left: 1%;
+
+  .board {
+    background-image:
+      url(./assets/cnd-background.png),
+      url(./assets/cnd-border.png);
+    background-size: 100vw 100vh, 100vw 100vh;
   }
 
-  .page3,
+  .top-part {
+    background-size: cover;
+    height: 10%;
+  }
+
+  .sign {
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%, 0);
+    width: 40vw;
+    max-width: 550px;
+    height: 30vh;
+    max-height: 500px;
+    background-size: 90% auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .page1 {
+    top: 30vh;
+    left: 8vw;
+    width: 60vw;
+    max-width: 500px;
+    height: 30vh;
+    max-height: 350px;
+    font-size: 2rem;
+    background-size: cover;
+  }
+
+  .page2 {
+    top: 30vh;
+    right: 5vw;
+    width: 60vw;
+    max-width: 550px;
+    height: 50vh;
+    max-height: 700px;
+    font-size: 2rem;
+    background-size: cover;
+  }
+
+  .page1 div,
+  .page2 div {
+    font-size: 4rem;
+  }
+
+  .page1 p {
+    font-size: 2.1rem;
+    margin-top: 5vh;
+  }
+
+    .page2 p {
+    font-size: 2.1rem;
+    margin-top: 1vh;
+  }
+  .letter img {
+    width: 25%;
+    max-width: 400px;
+    bottom: 8vh;
+    left: 35vw;
+  }
+
+  #bd-email {
+  background-color: antiquewhite;
+  border: 1px solid black;
+  padding: 5%;
+  font-family: 'MyFont', sans-serif;
+  width: 20rem;
+  border-radius: 4%;
+}
+
+#bd-email-btn {
+  width: 50%;
+  background-color: black;
+  border: none;
+  border-radius: 5%;
+  color: whitesmoke;
+  font-family: 'MyFont', sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+  .socials img {
+    width: 80px !important;
+    height: auto !important;
+    margin-top: 20%;
+  }
+
+  /* .page3,
   .page4 {
     width: 30vw;
     max-width: 350px;
     min-height: 120px;
     font-size: 1.5rem;
-  }
+  } */
 }

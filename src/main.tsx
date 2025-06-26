@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
-import Logo from "./assets/logo-letters.png"
 import letterImg from "./assets/Letter.png";
 import letterImgOpen from "./assets/LetterOpen.png";
 import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/Bluesky.png";
 import linkedinIcon from "./assets/Linkedin.png";
-import page3 from "./assets/page3.png";
-import missing from "./assets/page4.png";
+// import page3 from "./assets/page3.png";
+// import missing from "./assets/page4.png";
 
 function App() {
 
@@ -16,9 +15,9 @@ const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className="container">
+      <div className="top-part"></div>
       <div className="board">
         <div className="sign">
-          <img id="logo" src={Logo} />
         </div>
         <div className="page1">
           <div>HEAR YE! HEAR YE!</div>
@@ -59,12 +58,12 @@ const [isOpen, setIsOpen] = React.useState(false);
  <div className="letter" onClick={() => setIsOpen(true)}>
           <img src={isOpen ? letterImgOpen : letterImg} alt="Letter" />
         </div>
-        <div className="page3">
+        {/* <div className="page3">
           <img src={page3} />
         </div>
         <div className="page4">
           <img src={missing} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
