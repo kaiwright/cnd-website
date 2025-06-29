@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'MyFont';
-  src: url('./assets/fonts/SueEllenFrancisco-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/Sunday-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'text';
+  src: url('./assets/fonts/Wellfleet-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +24,7 @@ body,
   height: 100dvh;
   margin: 0;
   padding: 0;
-  font-family: 'MyFont', sans-serif !important;
+  font-family: 'MyFont', sans-serif;
   overflow: hidden;
 }
 
@@ -94,28 +101,6 @@ body,
   background-repeat: no-repeat;
 }
 
-.page1 div {
-  color: black;
-  font-size: 2rem;
-  font-weight: 600;
-  z-index: 2;
-  position: absolute;
-  padding-bottom: 1%;
-  top: 1%;
-}
-
-.page1 p {
-  color: black;
-  display: flex;
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 1.5rem;
-  font-size: 1.25rem;
-  z-index: 2;
-  line-height: 156%;
-}
-
 .page2 {
   position: absolute;
   width: 70%;
@@ -133,21 +118,51 @@ body,
   background-repeat: no-repeat;
 }
 
-.page2 div {
+.page2 h1 {
   color: black;
-  font-size: 2.3rem;
   font-weight: 600;
+  font-family: MyFont, sans-serif;
+  font-size: 2.5em;
+  padding-top: 0%;
   z-index: 2;
-  top: 1%;
+  display: flex;
+  text-align: center;
 }
 
-.page2 p {
+.page2 h4 {
   color: black;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: text, sans-serif;
   z-index: 2;
-  line-height: 156%;
+  padding: 5%;
+  margin-block-start: 0;
   display: flex;
-  margin-block-start: 0%;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  font-weight: 600;
+  font-family: MyFont, sans-serif;
+  font-size: 1.8em;
+  padding-top: 5%;
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+}
+
+h4 {
+  color: black;
+  font-weight: 600;
+  font-family: text, sans-serif;
+  z-index: 2;
+  padding: 5%;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  display: flex;
+  text-align: left;
 }
 
 .email-form {
@@ -169,7 +184,7 @@ body,
   background-color: antiquewhite;
   border: 1px solid black;
   padding: 5%;
-  font-family: 'MyFont', sans-serif;
+  font-family: 'text', sans-serif;
   width: 10rem;
   border-radius: 4%;
 }
@@ -180,7 +195,7 @@ body,
   border: none;
   border-radius: 5%;
   color: whitesmoke;
-  font-family: 'MyFont', sans-serif;
+  font-family: 'text', sans-serif;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -196,7 +211,7 @@ body,
 .letter img {
   position: absolute;
   width: 40%;
-  max-width: 250px;
+  max-width: 200px;
   height: auto;
   bottom: 3vh;
   left: 2vw;
@@ -252,32 +267,244 @@ body,
     max-width: 60%;
   }
 
-  .page1 div,
-  .page2 div {
-    font-size: 1.2rem;
+  .page2 h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 2em;
+    padding-top: 0%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
   }
 
-  .page1 p,
-  .page2 p {
-    font-size: 1rem;
-    margin-top: 4%;
+  .page2 h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    z-index: 0.8em;
+    padding: 5%;
+    margin-block-start: 0;
+    display: flex;
+    text-align: center;
+  }
+
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 1.5em;
+    padding-top: 5%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
+    margin-block-end: 0.3em;
+  }
+
+  h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    font-size: 0.8em;
+    z-index: 2;
+    padding: 5%;
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
+    display: flex;
+    text-align: left;
   }
 
   .letter img {
     width: 40%;
     bottom: 2vh;
-    left: 6vw;
+    left: 3vw;
+  }
+
+  .socials {
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
 
   .socials img {
     width: 32px !important;
     height: auto !important;
   }
+
+  .embeddable-buttondown-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  #bd-email {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 4%;
+    font-family: 'text', sans-serif;
+    width: 10rem;
+    border-radius: 4%;
+  }
+
+  #bd-email-btn {
+    width: 50%;
+    background-color: black;
+    border: none;
+    border-radius: 5%;
+    color: whitesmoke;
+    font-family: 'text', sans-serif;
+    font-size: 0.8rem;
+    padding: 3%;
+    cursor: pointer;
+  }
+
+  .top-part {
+    position: absolute;
+    width: 100%;
+    height: 6vh;
+  }
+}
+
+/* For medium screens */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  .sign {
+    top: 15%;
+    max-width: 500px;
+    height: 200px;
+    background-size: 70%;
+  }
+
+  .page1 {
+    width: 70%;
+    height: 20vh;
+    min-height: fit-content;
+    top: 28vh;
+    font-size: 1.5rem;
+    max-width: 60%;
+    max-height: 180px;
+    background-size: cover;
+  }
+
+  .page2 {
+    top: 50vh;
+    right: 10%;
+    height: 45vh;
+    max-height: 70%;
+    max-width: 50%;
+  }
+
+  .page2 h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 6vw;
+    padding-top: 5%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
+  }
+
+  .page2 h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    z-index: 2;
+    font-size: 2.5vw;
+    padding: 7%;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.8em;
+    display: flex;
+    text-align: center;
+    line-height: 150%;
+  }
+
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 6vw;
+    padding-top: 5%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
+    margin-block-end: 0.2em;
+  }
+
+  h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    font-size: 2.5vw;
+    z-index: 2;
+    padding: 7%;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.8em;
+    display: flex;
+    text-align: left;
+    line-height: 150%;
+  }
+
+  .letter img {
+    width: 40%;
+    max-width: 34vw;
+    bottom: 3vh;
+    left: 5vw;
+  }
+
+  .socials {
+    gap: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .socials img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .embeddable-buttondown-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  #bd-email {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 6%;
+    font-family: 'text', sans-serif;
+    width: 34vw;
+    border-radius: 4%;
+  }
+
+  #bd-email-btn {
+    width: 50%;
+    background-color: black;
+    border: none;
+    border-radius: 5%;
+    color: whitesmoke;
+    font-family: 'text', sans-serif;
+    font-size: 2.5vw;
+    padding: 4%;
+    cursor: pointer;
+  }
+
+  .top-part {
+    position: absolute;
+    width: 100%;
+    height: 6vh;
+  }
 }
 
 
 /* Responsive tweaks for large screens */
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
   .board {
     background-image:
@@ -288,18 +515,18 @@ body,
 
   .top-part {
     background-size: cover;
-    height: 10%;
+    height: 15%;
   }
 
   .sign {
-    top: 30vh;
+    top: 34vh;
     left: 50%;
     transform: translateX(-50%, 0);
     width: 40vw;
-    max-width: 550px;
-    height: 30vh;
-    max-height: 500px;
-    background-size: 90% auto;
+    max-width: 70%;
+    height: 35%;
+    max-height: 70%;
+    background-size: 80% auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -308,72 +535,130 @@ body,
   }
 
   .page1 {
-    top: 30vh;
+    top: 55%;
     left: 8vw;
-    width: 60vw;
-    max-width: 500px;
-    height: 30vh;
-    max-height: 350px;
-    font-size: 2rem;
+    width: 60%;
+    max-width: 40vw;
+    height: 40%;
+    max-height: 35%;
+    font-size: 2vw;
     background-size: cover;
   }
 
   .page2 {
     top: 30vh;
-    right: 5vw;
-    width: 60vw;
-    max-width: 550px;
-    height: 50vh;
-    max-height: 700px;
-    font-size: 2rem;
+    right: 3.5vw;
+    width: 50vw;
+    max-width: 30%;
+    height: 50%;
+    max-height: 60%;
+    font-size: 2vw;
     background-size: cover;
   }
 
-  .page1 div,
-  .page2 div {
-    font-size: 4rem;
+ .page2 h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 4vw;
+    padding-top: 5%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
   }
 
-  .page1 p {
-    font-size: 2.1rem;
-    margin-top: 5vh;
+  .page2 h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    z-index: 2;
+    font-size: 1.5vw;
+    padding: 7%;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.2em;
+    display: flex;
+    text-align: center;
+    line-height: 150%;
   }
 
-    .page2 p {
-    font-size: 2.1rem;
-    margin-top: 1vh;
+  h1 {
+    color: black;
+    font-weight: 600;
+    font-family: MyFont, sans-serif;
+    font-size: 3.5vw;
+    padding-top: 5%;
+    z-index: 2;
+    display: flex;
+    text-align: center;
+    margin-block-end: 0em;
   }
+
+  h4 {
+    color: black;
+    font-weight: 600;
+    font-family: text, sans-serif;
+    font-size: 1.5vw;
+    z-index: 2;
+    padding: 7%;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    display: flex;
+    text-align: left;
+    line-height: 150%;
+  }
+
   .letter img {
     width: 25%;
     max-width: 400px;
-    bottom: 8vh;
-    left: 35vw;
+    top: 18vh;
+    left: 7vw;
+  }
+
+  .socials {
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .socials img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .embeddable-buttondown-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
   }
 
   #bd-email {
-  background-color: antiquewhite;
-  border: 1px solid black;
-  padding: 5%;
-  font-family: 'MyFont', sans-serif;
-  width: 20rem;
-  border-radius: 4%;
-}
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 6%;
+    font-family: 'text', sans-serif;
+    width: 23vw;
+    border-radius: 4%;
+  }
 
-#bd-email-btn {
-  width: 50%;
-  background-color: black;
-  border: none;
-  border-radius: 5%;
-  color: whitesmoke;
-  font-family: 'MyFont', sans-serif;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+  #bd-email-btn {
+    width: 40%;
+    background-color: black;
+    border: none;
+    border-radius: 5%;
+    color: whitesmoke;
+    font-family: 'text', sans-serif;
+    font-size: 1.5vw;
+    padding: 3%;
+    cursor: pointer;
+  }
 
-  .socials img {
-    width: 80px !important;
-    height: auto !important;
-    margin-top: 20%;
+  .top-part {
+    position: absolute;
+    width: 100%;
+    height: 15vh;
   }
 
   /* .page3,
