@@ -20,12 +20,12 @@ const [isOpen, setIsOpen] = React.useState(false);
         <div className="sign">
         </div>
         <div className="page1">
-          <div>HEAR YE! HEAR YE!</div>
-          <p>Four adventurers set out on a perilous journey to create narrative-driven fantasy games</p>
+          <h1>HEAR YE! HEAR YE!</h1>
+          <h4>Four adventurers set out on a perilous journey to create narrative-driven fantasy games</h4>
         </div>
         <div className="page2">
-          <div>WANTED!!</div>
-          <p>Followers to support us in our quest</p>
+          <h1>WANTED!!</h1>
+          <h4>Followers to support us in our quest</h4>
           <div className="email-form">
             <form
               action="https://buttondown.com/api/emails/embed-subscribe/kaiwright"
