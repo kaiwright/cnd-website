@@ -3,17 +3,47 @@ import ReactDOM from "react-dom/client";
 import "./main.css";
 import letterImg from "./assets/Letter.png";
 import letterImgOpen from "./assets/LetterOpen.png";
+import letterImgOpen1 from "./assets/LetterOpen1.png";
+import letterImgOpen2 from "./assets/LetterOpen2.png";
+import letterImgOpen3 from "./assets/LetterOpen3.png";
 import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/Bluesky.png";
 import linkedinIcon from "./assets/Linkedin.png";
-// import page3 from "./assets/page3.png";
-// import missing from "./assets/page4.png";
+import letterImgClosedShort from "./assets/LetterClosedMobile.png"; // <-- your alternate image
 
 function App() {
 
-const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [openImg, setOpenImg] = React.useState(letterImgOpen1);
+  const openImages = [letterImgOpen1, letterImgOpen2, letterImgOpen3];
+
+  const handleLetterClick = () => {
+    if (!isOpen) {
+      // Only pick a new image when opening, and never the same as last open
+      const filtered = openImages.filter(img => img !== openImg);
+      const randomImg = filtered[Math.floor(Math.random() * filtered.length)];
+      setOpenImg(randomImg);
+    }
+    setIsOpen(open => !open);
+  };
+
+  const [closedImg, setClosedImg] = React.useState(letterImg);
+
+React.useEffect(() => {
+  function updateClosedImg() {
+    if (window.innerWidth < 1000) { // adjust threshold as needed
+      setClosedImg(letterImgClosedShort);
+    } else {
+      setClosedImg(letterImg);
+    }
+  }
+  updateClosedImg();
+  window.addEventListener("resize", updateClosedImg);
+  return () => window.removeEventListener("resize", updateClosedImg);
+}, []);
 
   return (
+    
     <div className="container">
       <div className="top-part"></div>
       <div className="board">
@@ -55,15 +85,9 @@ const [isOpen, setIsOpen] = React.useState(false);
 
           </div>
         </div>
- <div className="letter" onClick={() => setIsOpen(true)}>
-          <img src={isOpen ? letterImgOpen : letterImg} alt="Letter" />
-        </div>
-        {/* <div className="page3">
-          <img src={page3} />
-        </div>
-        <div className="page4">
-          <img src={missing} />
-        </div> */}
+<div className="letter" onClick={handleLetterClick}>
+  <img src={isOpen ? openImg : closedImg} alt="Letter" />
+</div>
       </div>
     </div>
   );
