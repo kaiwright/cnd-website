@@ -766,7 +766,7 @@ body,
 
 
 /* Middling middle */
-@media (min-width: 822px) and (max-width: 1025px) {
+@media (min-width: 822px) and (max-width: 1440px) {
 
   .sign {
     top: 18%;
@@ -933,7 +933,7 @@ body,
 
 
 /* Responsive tweaks for large screens */
-@media (min-width: 1026px) and (min-height: 901px) {
+@media (min-width: 1441px) and (min-height: 901px) {
 
   .board {
     background-image:
@@ -948,17 +948,17 @@ body,
   }
 
   .sign {
-    top: 35%;
-    max-width: 650px;
+    top: 28vh;
+    max-width: 50vh;
     max-height: 350px;
   }
 
   .page1 {
     position: absolute;
     width: 80%;
-    max-width: 650px;
-    top: 55%;
-    left: 18%;
+    max-width: 40vw;
+    top: 55vh;
+    left: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -981,10 +981,10 @@ body,
 
   .page2 {
     position: absolute;
-    width: 70%;
-    max-width: 520px;
-    top: 30vh;
-    right: 5%;
+    width: 60%;
+    max-width: 32vw;
+    top: 25vh;
+    right: 2.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -998,7 +998,7 @@ body,
     color: black;
     font-weight: 600;
     font-family: MyFont, sans-serif;
-    font-size: 4em;
+    font-size: 3.5vw;
     padding-top: 0%;
     z-index: 2;
     display: flex;
@@ -1010,7 +1010,7 @@ body,
     color: black;
     font-weight: 600;
     font-family: text, sans-serif;
-    font-size: 2.2em;
+    font-size: 1.5vw;
     z-index: 2;
     padding-right: 10%;
     padding-left: 10%;
@@ -1024,7 +1024,7 @@ body,
     color: black;
     font-weight: 600;
     font-family: MyFont, sans-serif;
-    font-size: 4em;
+    font-size: 3vw;
     padding-top: 10%;
     z-index: 2;
     display: flex;
@@ -1037,7 +1037,7 @@ body,
     color: black;
     font-weight: 600;
     font-family: text, sans-serif;
-    font-size: 2.2em;
+    font-size: 1.5vw;
     z-index: 2;
     padding-left: 5%;
     padding-right: 5%;
@@ -1049,7 +1049,7 @@ body,
 
   .letter img {
     width: 25%;
-    max-width: 400px;
+    max-width: 350px;
     top: 13vh;
     left: 7vw;
   }
@@ -1226,7 +1226,7 @@ body,
   .letter img {
     width: 25%;
     max-width: 300px;
-    top: 6vh;
+    top: 10vh;
     left: 7vw;
   }
 
