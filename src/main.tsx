@@ -2,20 +2,35 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
 import letterImg from "./assets/Letter.png";
-import letterImgOpen from "./assets/LetterOpen.png";
 import letterImgOpen1 from "./assets/LetterOpen1.png";
 import letterImgOpen2 from "./assets/LetterOpen2.png";
 import letterImgOpen3 from "./assets/LetterOpen3.png";
+import letterImgOpen4 from "./assets/LetterOpen4.png";
 import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/Bluesky.png";
 import linkedinIcon from "./assets/Linkedin.png";
-import letterImgClosedShort from "./assets/LetterClosedMobile.png"; // <-- your alternate image
+import letterImgClosedShort from "./assets/LetterClosedMobile.png"; 
+import CNDSmallLogo from "./assets/CNDSmallLogo.png";
 
 function App() {
 
+const imagesToPreload = [
+  letterImg,
+  letterImgOpen1,
+  letterImgOpen2,
+  letterImgOpen3,
+  letterImgOpen4,
+  letterImgClosedShort,
+  CNDSmallLogo,
+  instagramIcon,
+  blueskyIcon,
+  linkedinIcon,
+];
+  
+
   const [isOpen, setIsOpen] = React.useState(false);
   const [openImg, setOpenImg] = React.useState(letterImgOpen1);
-  const openImages = [letterImgOpen1, letterImgOpen2, letterImgOpen3];
+  const openImages = [letterImgOpen1, letterImgOpen2, letterImgOpen3, letterImgOpen4];
 
   const handleLetterClick = () => {
     if (!isOpen) {
@@ -42,6 +57,33 @@ React.useEffect(() => {
   return () => window.removeEventListener("resize", updateClosedImg);
 }, []);
 
+
+const [loading, setLoading] = React.useState(true);
+
+React.useEffect(() => {
+  let loaded = 0;
+  imagesToPreload.forEach(src => {
+    const img = new window.Image();
+    img.src = src;
+    img.onload = img.onerror = () => {
+      loaded += 1;
+      if (loaded === imagesToPreload.length) {
+        setLoading(false);
+      }
+    };
+  });
+}, []);
+
+if (loading) {
+  return (
+    <div className="loading-screen">
+      <div className="loading-circle">
+        <img src={CNDSmallLogo} alt="Loading..." className="loading-logo" />
+      </div>
+    </div>
+  );
+}
+
   return (
     
     <div className="container">
@@ -51,7 +93,7 @@ React.useEffect(() => {
         </div>
         <div className="page1">
           <h1>HEAR YE! HEAR YE!</h1>
-          <h4>Four adventurers set out on a perilous journey to create narrative-driven fantasy games</h4>
+          <h4>Four adventurers set out on a perilous journey to create a British folklore inspired fantasy game.</h4>
         </div>
         <div className="page2">
           <h1>WANTED!!</h1>
