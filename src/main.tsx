@@ -6,7 +6,7 @@ import letterImgOpen1 from "./assets/LetterOpen1.png";
 import letterImgOpen2 from "./assets/LetterOpen2.png";
 import letterImgOpen3 from "./assets/LetterOpen3.png";
 import letterImgOpen4 from "./assets/LetterOpen4.png";
-import instagramIcon from "./assets/instagram.png";
+import instagramIcon from "./assets/Instagram.png";
 import blueskyIcon from "./assets/bluesky.png";
 import linkedinIcon from "./assets/linkedin.png";
 import tiktokIcon from "./assets/tiktok.png";
