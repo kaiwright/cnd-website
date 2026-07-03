@@ -7,13 +7,13 @@ import letterImgOpen2 from "./assets/LetterOpen2.png";
 import letterImgOpen3 from "./assets/LetterOpen3.png";
 import letterImgOpen4 from "./assets/LetterOpen4.png";
 import instagramIcon from "./assets/Instagram.png";
-import blueskyIcon from "./assets/bluesky.png";
-import linkedinIcon from "./assets/linkedin.png";
+import blueskyIcon from "./assets/Bluesky.png";
+import linkedinIcon from "./assets/Linkedin.png";
 import tiktokIcon from "./assets/tiktok.png";
 import youtubeIcon from "./assets/youtube.png";
 import letterImgClosedShort from "./assets/LetterClosedMobile.png";
 import CNDSmallLogo from "./assets/CNDSmallLogo.png";
-import Fern from "./assets/fern.png";   
+import Fern from "./assets/fern.png";
 
 function App() {
   const imagesToPreload = [
